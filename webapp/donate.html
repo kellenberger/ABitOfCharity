@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/materialize.css">
+  <link rel="stylesheet" href="./css/application.css">
+
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script src="./js/materialize.min.js"></script>
+  <script src="./js/application.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<html>
+<body>
+  <header>
+    <nav>
+      <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+       <a href="/" class="brand-logo center">Donate</a>
+    </nav>
+
+    <ul id="slide-out" class="sidenav">
+      <li class="logo">
+        <div id="logo-container" class="brand-logo">
+          <img src="./images/logo_web_small.png" class="sidebar-logo">
+        </div>
+      </li>
+      <li class="bold"><a href="about.html" class="waves-effect">Home</a></li>
+      <li class="bold"><a href="about.html" class="waves-effect">About</a></li>
+      <li class="bold"><a href="donate.html" class="waves-effect waves-teal">Donate</a></li>
+      <li class="bold"><a href="getting-started.html" class="waves-effect waves-teal">Organizations</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="row section">
+        <div class="col s12  l4 m6 push-l4 push-m3">
+          <div class="input-field donation-amount">
+            <input name="amount" value="0.000" step="0.001" min="0.000" type="number">
+            <label for="amount" class="right">Donation Amount</label>
+            <img src="./images/ether_logo.png" class="ether-logo">
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

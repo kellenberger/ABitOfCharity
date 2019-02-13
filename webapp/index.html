@@ -1,30 +1,45 @@
-<!DOCTYPE html>
-<head>
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link rel="stylesheet" href="./css/application.css">
+  <!DOCTYPE html>
+  <head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-  <script src="./js/jquery-3.3.1.min.js"></script>
-  <script src="./js/materialize.min.js"></script>
-  <script src="./js/application.js"></script>
-</head>
-<html>
-<body>
+    <link rel="stylesheet" href="./css/materialize.css">
+    <link rel="stylesheet" href="./css/application.css">
 
-  <nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo right">A Bit Of Charity</a>
-      <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="#!">Donate</a></li>
-        <li><a href="#!">Organization</a></li>
-        <li><a href="#!">About Us</a></li>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/materialize.min.js"></script>
+    <script src="./js/application.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+  <html>
+  <body>
+    <header>
+      <nav>
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+         <a href="/" class="brand-logo center">Home</a>
+      </nav>
+
+      <ul id="slide-out" class="sidenav">
+        <li class="logo">
+          <div id="logo-container" class="brand-logo">
+            <img src="./images/logo_web_small.png" class="sidebar-logo">
+          </div>
+        </li>
+        <li class="bold"><a href="about.html" class="waves-effect">Home</a></li>
+        <li class="bold"><a href="about.html" class="waves-effect">About</a></li>
+        <li class="bold"><a href="donate.html" class="waves-effect waves-teal">Donate</a></li>
+        <li class="bold"><a href="getting-started.html" class="waves-effect waves-teal">Organizations</a></li>
       </ul>
-    </div>
-  </nav>
+    </header>
 
-  <div class="web-content">
-    <img class="materialboxed" width="650" src="images/logo_web.png">
-  </div>
-
-</body>
+    <main>
+      <div class="container">
+        <div class="main-logo-row">
+          <div class="main-logo-container">
+            <img src="images/logo_web.png" class="main-logo">
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
