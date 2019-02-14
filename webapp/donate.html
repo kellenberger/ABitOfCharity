@@ -5,10 +5,6 @@
   <link rel="stylesheet" href="./css/materialize.css">
   <link rel="stylesheet" href="./css/application.css">
 
-  <script src="./js/jquery-3.3.1.min.js"></script>
-  <script src="./js/materialize.min.js"></script>
-  <script src="./js/application.js"></script>
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <html>
@@ -27,14 +23,14 @@
       </li>
       <li class="bold"><a href="/" class="waves-effect">Home</a></li>
       <li class="bold"><a href="about.html" class="waves-effect">About</a></li>
-      <li class="bold"><a href="donate.html" class="waves-effect waves-teal">Donate</a></li>
-      <li class="bold"><a href="organizations.html" class="waves-effect waves-teal">Organizations</a></li>
+      <li class="bold"><a href="donate.html" class="waves-effect">Donate</a></li>
+      <li class="bold"><a href="organizations.html" class="waves-effect">Organizations</a></li>
     </ul>
   </header>
 
   <main>
     <div class="container">
-      <div class="row section">
+      <div class="row section donation-amount-row">
         <div class="col s12  l4 m6 push-l4 push-m3">
           <div class="input-field donation-amount">
             <input name="amount" value="0.000" step="0.001" min="0.000" type="number">
@@ -44,26 +40,123 @@
         </div>
       </div>
 
-      <h1 class="center">Our Charities/NGOs</h1>
+      <div class="row center-align">
+        <a class="waves-effect waves-light btn donation-button">Donate to All</a>
+        <a class="waves-effect waves-light btn distribute-donation-button">Distribute Donation</a>
+      </div>
+
+      <h1 class="center">Our Charities and NGOs</h1>
+
+      <div class="row filter-row">
+        <div class="chip selected"><input type="hidden" value="all">All</div>
+        <div class="chip"><input type="hidden" value="wildlife">Wildlife</div>
+        <div class="chip"><input type="hidden" value="water">Clean Water</div>
+        <div class="chip"><input type="hidden" value="kids">Kids</div>
+      </div>
 
       <div class="row">
-        <div class="col s12 m7">
-          <div class="card">
+        <div class="col m12 l6 xl4">
+          <div class="card organization-card" data-category="wildlife">
+            <input type="hidden" class="organization-id" value="0">
             <div class="card-image">
               <img src="./images/organizations/wwf.jpg">
               <span class="card-title">WWF</span>
+              <label class="organization-checkbox">
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+              </label>
             </div>
             <div class="card-content">
               <p>I am a very simple card. I am good at containing small bits of information.
                 I am convenient because I require little markup to use effectively.</p>
               </div>
               <div class="card-action">
-                <a href="#">This is a link</a>
+                <a href="#">Website</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col m12 l6 xl4">
+            <div class="card organization-card" data-category="wildlife">
+              <input type="hidden" class="organization-id" value="0">
+              <div class="card-image">
+                <img src="./images/organizations/greenpeace.jpg">
+                <span class="card-title">GreenPeace</span>
+                <label class="organization-checkbox">
+                  <input type="checkbox" checked="checked">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <div class="card-content">
+                <p>I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">Website</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col m12 l6 xl4">
+            <div class="card organization-card" data-category="kids">
+              <input type="hidden" class="organization-id" value="0">
+              <div class="card-image">
+                <img src="./images/organizations/unicef.jpg">
+                <span class="card-title">Unicef</span>
+                <label class="organization-checkbox">
+                  <input type="checkbox" checked="checked">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <div class="card-content">
+                <p>I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">Website</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col m12 l6 xl4">
+            <div class="card organization-card" data-category="water">
+              <input type="hidden" class="organization-id" value="0">
+              <div class="card-image">
+                <img src="./images/organizations/charity_water.jpeg">
+                <span class="card-title">CharityWater</span>
+                <label class="organization-checkbox">
+                  <input type="checkbox" checked="checked">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <div class="card-content">
+                <p>I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">Website</a>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <div id="donation-modal" class="modal">
+        <div class="modal-content">
+          <h4>Distribute <span class="amount"></span> Ether</h4>
+          <form>
+
+          </form>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect btn-flat">Cancel</a>
+          <a href="#!" class="modal-close waves-effect btn-flat amber darken-1">Donate</a>
+        </div>
+      </div>
     </main>
+
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/materialize.min.js"></script>
+    <script src="./js/application.js"></script>
   </body>
-  </html>
+</html>
