@@ -1,1 +1,48 @@
+nav a.sidenav-trigger {
+  display: initial;
+}
 
+li.logo {
+  height: 128px;
+}
+
+div#logo-container{
+  height: 128px;
+  width: 128px;
+  padding-left: calc((100% - 128px) / 2);
+  padding-right: calc((100% - 128px) / 2);
+}
+
+.sidebar-logo{
+  height: 100%;
+}
+
+.main-logo-row {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.main-logo {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.input-field.donation-amount input {
+  height: 7rem;
+  font-size: 5rem;
+  width: calc(100% - 4rem);
+}
+
+.input-field.donation-amount label {
+  font-size: 2rem;
+}
+
+.input-field.donation-amount .ether-logo {
+  height: 5rem;
+  width: auto;
+  position: absolute;
+  right: 0;
+  top: 1rem;
+}
