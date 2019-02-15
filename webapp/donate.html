@@ -10,10 +10,12 @@
 <html>
 <body>
   <header>
-    <nav>
-      <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <a href="/" class="brand-logo center">Donate</a>
-    </nav>
+    <div class="navbar-fixed">
+      <nav>
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <a href="/" class="brand-logo center">Donate</a>
+      </nav>
+    </div>
 
     <ul id="slide-out" class="sidenav">
       <li class="logo">
@@ -67,8 +69,7 @@
               </label>
             </div>
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
+              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
               </div>
               <div class="card-action">
                 <a href="#">Website</a>
@@ -78,7 +79,7 @@
 
           <div class="col m12 l6 xl4">
             <div class="card organization-card" data-category="wildlife">
-              <input type="hidden" class="organization-id" value="0">
+              <input type="hidden" class="organization-id" value="1">
               <div class="card-image">
                 <img src="./images/organizations/greenpeace.jpg">
                 <span class="card-title">GreenPeace</span>
@@ -88,8 +89,7 @@
                 </label>
               </div>
               <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.
-                  I am convenient because I require little markup to use effectively.</p>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
               </div>
               <div class="card-action">
                 <a href="#">Website</a>
@@ -99,7 +99,7 @@
 
           <div class="col m12 l6 xl4">
             <div class="card organization-card" data-category="kids">
-              <input type="hidden" class="organization-id" value="0">
+              <input type="hidden" class="organization-id" value="2">
               <div class="card-image">
                 <img src="./images/organizations/unicef.jpg">
                 <span class="card-title">Unicef</span>
@@ -109,8 +109,7 @@
                 </label>
               </div>
               <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.
-                  I am convenient because I require little markup to use effectively.</p>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
               </div>
               <div class="card-action">
                 <a href="#">Website</a>
@@ -120,18 +119,57 @@
 
           <div class="col m12 l6 xl4">
             <div class="card organization-card" data-category="water">
-              <input type="hidden" class="organization-id" value="0">
+              <input type="hidden" class="organization-id" value="3">
               <div class="card-image">
                 <img src="./images/organizations/charity_water.jpeg">
-                <span class="card-title">CharityWater</span>
+                <span class="card-title">Charity: Water</span>
                 <label class="organization-checkbox">
                   <input type="checkbox" checked="checked">
                   <span class="checkmark"></span>
                 </label>
               </div>
               <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.
-                  I am convenient because I require little markup to use effectively.</p>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">Website</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col m12 l6 xl4">
+            <div class="card organization-card" data-category="kids">
+              <input type="hidden" class="organization-id" value="4">
+              <div class="card-image">
+                <img src="./images/organizations/save_the_children.jpg">
+                <span class="card-title">Save The Children</span>
+                <label class="organization-checkbox">
+                  <input type="checkbox" checked="checked">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <div class="card-content">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">Website</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col m12 l6 xl4">
+            <div class="card organization-card" data-category="water">
+              <input type="hidden" class="organization-id" value="5">
+              <div class="card-image">
+                <img src="./images/organizations/waterorg.jpg">
+                <span class="card-title">Water.org</span>
+                <label class="organization-checkbox">
+                  <input type="checkbox" checked="checked">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <div class="card-content">
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
               </div>
               <div class="card-action">
                 <a href="#">Website</a>
@@ -150,7 +188,7 @@
         </div>
         <div class="modal-footer">
           <a href="#!" class="modal-close waves-effect btn-flat">Cancel</a>
-          <a href="#!" class="modal-close waves-effect btn-flat amber darken-1">Donate</a>
+          <a href="#!" class="modal-close waves-effect btn-flat amber darken-1 submit-distributed-donation">Donate</a>
         </div>
       </div>
     </main>
@@ -158,6 +196,7 @@
     <script src="./js/jquery-3.3.1.min.js"></script>
     <script src="./js/materialize.min.js"></script>
     <script src="./js/utilities.js"></script>
+    <script src="./js/donation.js"></script>
     <script src="./js/application.js"></script>
   </body>
 </html>

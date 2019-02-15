@@ -11,9 +11,11 @@ var openDonationModal = (function(donation_amount){
     var this_share = share;
     if(i < 100 % number_of_charities) this_share++;
 
-    var html = "<div class='row'><div class='col xl2 s4 valign-wrapper'>" ;
+    var html = "<div class='row'>";
+    html += "<input type='hidden' class='hidden-id' value='" + $(this).closest(".card").find("input.organization-id").val() + "'>";
+    html += "<div class='col xl2 s4 valign-wrapper'>" ;
     html += $(this).closest(".card").find(".card-title").text();
-    html += "</div><div class='col s5 xl8'><p class='range-field'><input type='range' min='0' max='100' value='" + this_share + "'>"
+    html += "</div><div class='col s5 xl8'><p class='range-field'><input type='range' min='0' max='100' value='" + this_share + "'>";
     html += "<span class='thumb'><span class='value'></span></span>";
     html += "</p></div>";
     html += "<div class='col xl2 s3'><span class='row-amount'>";
@@ -38,25 +40,7 @@ $(document).ready(function(){
   $('.sidenav').sidenav();
   $('.modal').modal();
 
-
-  if (typeof web3 !== 'undefined') {
-    web3js = new Web3(web3.currentProvider);
-  } else {
-    console.log('No web3? You should consider trying MetaMask!');
-    web3js = new Web3(new Web3.providers.HttpProvider('http://localhost:8545'));
-  }
-
-  web3.eth.defaultAccount = web3.eth.accounts[0];
-
-  var abiofContract = web3.eth.contract([{"constant":false,"inputs":[{"name":"_name","type":"string"},{"name":"_addr","type":"address"}],"name":"addOrganization","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"donate","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"}]);
-  var abitofcharitycontract = abiofContract.at("0x04b6131b6d0d6ea56416edcd935391a9dbabc23b");
-
-  // // call contract function
-  // abitofcharitycontract.addOrganization("wwf", "0xe5cbe37DBDb7c2e4F442FAA9Fb223487c5A0c70d", function(){alert("it worked!")});
-  //
-  // // transfer ether
-  // var getData = abitofcharitycontract.donate.getData();
-  // web3.eth.sendTransaction({to: abitofcharitycontract.address, data: getData, value:web3.toWei("0.5", "ether")}, function(){alert("worked");});
+  setupWeb3();
 
   $("body").on("click", ".filter-row .chip", function(){
     var $this = $(this);
@@ -92,6 +76,24 @@ $(document).ready(function(){
     } else {
       openDonationModal(donation_amount);
     }
+  });
+
+  $("body").on("click", ".donation-button", function(){
+    var donation_amount = parseFloat($(".donation-amount input").val());
+    donation(donation_amount);
+  });
+
+  $("body").on("click", "#donation-modal .submit-distributed-donation", function(){
+    var $modal = $(this).closest(".modal");
+    var amount = parseFloat($modal.find("input#donation-amount").val());
+    var percentages = [];
+    $modal.find(".row").each(function(){
+      id = parseInt($(this).find("input.hidden-id").val());
+      value = parseInt($(this).find("input[type='range']").val());
+      percentages.push({id: id, percentage: value});
+    });
+    console.log(percentages);
+    distributedDonation(amount, percentages);
   });
 
   $("body").on("input", "#donation-modal input[type='range']", function(){
