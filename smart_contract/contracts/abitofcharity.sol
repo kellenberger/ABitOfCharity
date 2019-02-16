@@ -70,7 +70,7 @@ contract ABitOfCharity is Pausable, Ownable {
     }
 
 
-    function donate(uint[] memory _percentages) public payable {//donates ether by passing an array of integers that represents the percentages allocated to a certain org.
+    function donatePerc(uint[] memory _percentages) public payable {//donates ether by passing an array of integers that represents the percentages allocated to a certain org.
         require(msg.value > 0);
         require(organizations.length>=1,"No organizations added.");
         require(organizations.length==_percentages.length, "Wrong number of organizations.");
@@ -195,7 +195,7 @@ contract ABitOfCharity is Pausable, Ownable {
         transferTokens(symbol_,organizations[organizations.length-1].addr,(amount_ / organizations.length) + (amount_ % organizations.length));
     }
 
-    function donateTokens(bytes32 symbol_, uint256 amount_,uint[] memory _percentages) public{
+    function donatePercTokens(bytes32 symbol_, uint256 amount_,uint[] memory _percentages) public{
         require(amount_ > 0);
         require(organizations.length>=1,"No organizations added.");
         require(organizations.length==_percentages.length, "Wrong number of organizations.");

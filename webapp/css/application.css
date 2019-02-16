@@ -13,6 +13,10 @@ div#logo-container{
   padding-right: calc((100% - 128px) / 2);
 }
 
+div.main-logo-container{
+  margin-top: 100px;
+}
+
 .sidebar-logo{
   height: 100%;
 }
@@ -27,6 +31,10 @@ div#logo-container{
   max-width: 100%;
   height: auto;
   margin: 0 auto;
+}
+
+.donation-amount-row {
+  margin: 0;
 }
 
 .input-field.donation-amount input {
@@ -45,4 +53,117 @@ div#logo-container{
   position: absolute;
   right: 0;
   top: 1rem;
+}
+
+.error-toast {
+  background-color: #e57373;
+}
+
+.success-toast {
+  background-color: #43a047;
+}
+
+.filter-row {
+  display: flex;
+  justify-content: center;
+}
+
+.filter-row .chip {
+  cursor: pointer;
+}
+
+.filter-row .chip.selected {
+  color: white;
+  background-color: #ffb300;
+}
+
+.organization-card{
+  height: 360px;
+}
+
+.organization-card .card-image{
+  height: 200px;
+  overflow: hidden;
+}
+
+.organization-card .card-title {
+  font-weight: 500;
+}
+
+.organization-card .card-image img{
+  width: 100%;
+}
+
+.organization-card .card-content {
+  height: calc(360px - 200px - 55px);
+}
+
+.range-field {
+  margin: 0;
+}
+
+.small-ether-logo {
+  height: 1em;
+}
+
+/*
+Checkbox
+*/
+
+.organization-checkbox {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.organization-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: relative !important;
+  top: 0;
+  right: 0;
+  height: 26px;
+  width: 26px;
+  border-radius: 13px;
+  border: 1px solid #444;
+  background-color: white;
+  padding: 0 !important;
+}
+
+/* On mouse-over, add a grey background color */
+.organization-checkbox:hover input ~ .checkmark {
+  background-color: #eee;
+}
+
+/* When the checkbox is checked, add a blue background */
+.organization-checkbox input:checked ~ .checkmark {
+  background-color: #43a047;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:before {
+  content: "";
+  position: absolute;
+  display: none !important;
+}
+
+/* Show the checkmark when checked */
+.organization-checkbox input:checked + .checkmark:before {
+  display: block !important;
+}
+
+.organization-checkbox .checkmark:before {
+  left: 0px !important;
+  top: -2px !important;
+  border-right: 2px solid white !important;
+  border-bottom: 2px solid white !important;
+  height: 18px !important;
+  width: 10px !important;
 }

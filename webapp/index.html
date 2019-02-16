@@ -5,19 +5,17 @@
     <link rel="stylesheet" href="./css/materialize.css">
     <link rel="stylesheet" href="./css/application.css">
 
-    <script src="./js/jquery-3.3.1.min.js"></script>
-    <script src="./js/materialize.min.js"></script>
-    <script src="./js/application.js"></script>
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
   <html>
   <body>
     <header>
-      <nav>
-        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-         <a href="/" class="brand-logo center">Home</a>
-      </nav>
+      <div class="navbar-fixed">
+        <nav>
+          <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+           <a href="/" class="brand-logo center">Home</a>
+        </nav>
+      </div>
 
       <ul id="slide-out" class="sidenav">
         <li class="logo">
@@ -27,8 +25,8 @@
         </li>
         <li class="bold"><a href="/" class="waves-effect">Home</a></li>
         <li class="bold"><a href="about.html" class="waves-effect">About</a></li>
-        <li class="bold"><a href="donate.html" class="waves-effect waves-teal">Donate</a></li>
-        <li class="bold"><a href="organizations.html" class="waves-effect waves-teal">Organizations</a></li>
+        <li class="bold"><a href="donate.html" class="waves-effect">Donate</a></li>
+        <li class="bold"><a href="organizations.html" class="waves-effect">Organizations</a></li>
       </ul>
     </header>
 
@@ -36,10 +34,15 @@
       <div class="container">
         <div class="main-logo-row">
           <div class="main-logo-container">
-            <img src="images/logo_web.png" class="main-logo">
+            <img src="images/logo_web_extended.png" class="main-logo">
           </div>
         </div>
       </div>
     </main>
+
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/materialize.min.js"></script>
+    <script src="./js/utilities.js"></script>
+    <script src="./js/application.js"></script>
   </body>
 </html>
